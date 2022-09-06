@@ -61,28 +61,28 @@ class ChatBot(MDApp):
         elif value == "Developers" or value == "developers" or value == "Devs" or value == "devs" or value =='4':
             response ="--- DEVELOPERS ---\n\n1. Florencio, Daniel\n2. Herrera, Mikaela\n3. Medrano, Yvette\n4. Noprada, Shane\n5. Revilla, Aarone\n\n Type 'help' for more information."
         elif value == "Help" or value == "help" or value == "info" or value == "Info":
-            response = "Lucy: These are the keywords that you can use to navigate the app.\n\nbiblioteca - project information\ndevs - the developers\nbooks - list of books\n"
-
+            response = "Lucy: These are the keywords that you can use to navigate the app.\n\nbiblioteca - project information\ndevs - the developers\nbooks - list of books\nfiction - fictional books"
+        # Optional
         elif value == "best" or value == "Best" or value == "top" or value == "Top":
             response ="--- TOP 5 BOOKS ---\n\n1. Book Title\n2. Book Title\n3. Book Title\n4. Book Title\n5. Book Title\n\n Type 'help' for more information."
-
-        elif value == "list" or value == "List" or value == "all" or value == "All"or value == "Directory"or value == "directory":
+        # All of the books
+        elif value == "list" or value == "List" or value == "all" or value == "All"or value == "Directory"or value == "directory" or value == "List of Books" or value == "list of books":
             response ="--- LIST OF BOOKS ---\n\n1. Book Title\n2. Book Title\n3. Book Title\n4. Book Title\n5. Book Title\n\n Type 'help' for more information."
-
+            # Course description
         elif value == "Intelligent agents" or value == "intelligent agents" or value == "course" or value == "Course":
-            response ="  --- FINAL PROJECT ---\n        GROUP 5\n CS 403 - CS31S1\n Intelligent Agents\n\n Submitted to: Ms. Lorna C. Lim\n\n\n Type 'menu' to go to the main menu."
+            response ="  --- FINAL PROJECT ---\n           GROUP 5\n CS 403 - CS31S1\n Intelligent Agents\n\n Submitted to: Ms. Lorna C. Lim\n\n\n Type 'menu' to go to the main menu."
 
         elif value == "Stop" or value == "stop" or value == "done" or value == "Done" or value =='out'or value =='Out':
             response = "Lucy: Thank you for using our application."
-
+            # Fictional books (All)
         elif value == "Fiction" or value == "fiction":
             screen_manager.get_screen('chats').chat_list.add_widget(ResponseImage(source="images/img_cat/bg.png"))
             response = "FICTIONAL\n\n1. Sea of Tranquility\n2. Game of Thrones\n3. Fifty Shades of Grey"
-
+            # Non-Fictional books (All)
         elif value == "Non-Fiction" or value == "non-fiction" or value == "non fiction" or value == "Non fiction" or value == "not fiction" or value == "Not fiction":
             screen_manager.get_screen('chats').chat_list.add_widget(ResponseImage(source="images/img_cat/bg.png"))
             response = "1. Book 1\n2. Book 2\n3. Book 3"
-
+            # Academic books (All)
         elif value == "Academic" or value == "academic" or value == "acad" or value == "Acad" or value == "educational" or value == "Educational":
             screen_manager.get_screen('chats').chat_list.add_widget(ResponseImage(source="images/img_cat/bg.png"))
             response = "1. Book 1\n2. Book 2\n3. Book 3"
