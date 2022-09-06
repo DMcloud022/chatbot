@@ -64,10 +64,22 @@ class ChatBot(MDApp):
             response = "Lucy: These are the keywords that you can use to navigate the app.\n\nbiblioteca - project information\ndevs - the developers\nbooks - list of books\nfiction - fictional books"
         # Optional
         elif value == "best" or value == "Best" or value == "top" or value == "Top":
-            response ="--- TOP 5 BOOKS ---\n\n1. Book Title\n2. Book Title\n3. Book Title\n4. Book Title\n5. Book Title\n\n Type 'help' for more information."
+            response ="--- TOP 5 BOOKS ---\n\n1. Sadako and the Thousand Paper Cranes by Eleanor Coerr\n2. House of Furies by Madeleine Roux\
+            \n3. Alone With You in the Ether by Olivia Blake\n4. A Gentle Reminder by Bianca Sparacino\
+            \n5.  A Walk to Remember by Nicholas Sparks\n\n Type 'help' for more information."
         # All of the books
         elif value == "list" or value == "List" or value == "all" or value == "All"or value == "Directory"or value == "directory" or value == "List of Books" or value == "list of books":
-            response ="--- LIST OF BOOKS ---\n\n1. Book Title\n2. Book Title\n3. Book Title\n4. Book Title\n5. Book Title\n\n Type 'help' for more information."
+            response ="--- LIST OF BOOKS ---\n\n•A Brief History of Time\n•A Gentle Reminder\n•A Room of One’s Own \
+            \n•A Walk to Remember\n•Alone With You in the Ether\n•Atomic Habits\n•Beyond Good and Evil\n•Cry of the Kalahari\
+            \n•Dune\n•Educated\n•Emma\n•Fahrenheit 451\n•Fifty Shades of Grey\n•Game of Thrones\
+            \n•Harry Potter and the Deathly Hallows\n•House of Furies\n•How to Write a Lot\n•Introduction to Academic Writing\
+            \n•Me Before You\n•On the Origins of Species\n•Pride and Prejudice\n•Queen of Our Times\
+            \n• Quiet: The Power of Introverts in a World that Can’t Stop Talking\n•Sadako and the Thousand Paper Cranes\
+            \n•Scary Smart\n•Sea of tranquility\n•Song of Achilles\n•The Book of Minds\n•The Colour of Madness\
+            \n•The Communist Manifesto\n•The Diary of a Young Girl\n•The Fault in Our Stars\n•The Golden Compass\
+            \n•The Great Gatsby\n•The Lion, the Witch and the wardrobe\n•The Lord of the Rings\n•The Meaning of Relativity\
+            \n•The Notebook\n•The Reluctant Career\n•The Secret Wisdom of the Earth\n•The Shakespeare Requirement\
+            \n•The Uses of Literacy\n•Where the Crawdads Sing\n•Writing for Social Scientists\n\n Type 'help' for more information."
             # Course description
         elif value == "Intelligent agents" or value == "intelligent agents" or value == "course" or value == "Course":
             response ="  --- FINAL PROJECT ---\n           GROUP 5\n CS 403 - CS31S1\n Intelligent Agents\n\n Submitted to: Ms. Lorna C. Lim\n\n\n Type 'menu' to go to the main menu."
@@ -92,7 +104,6 @@ class ChatBot(MDApp):
             response = "1. Book 1\n2. Book 2\n3. Book 3"
 
         # FICTION
-
         elif value == "Sea of Tranquility" or value == "sea of tranquility":
             screen_manager.get_screen('chats').chat_list.add_widget(ResponseImage(source="images/fiction/SoT.png"))
             response = " Book Title: Sea of Tranquility\n Author: Emily St. John Mandel\n Published: April 5, 2022"
@@ -219,47 +230,6 @@ class ChatBot(MDApp):
             screen_manager.get_screen('chats').chat_list.add_widget(ResponseImage(source="images/academic/MBY.png"))
             response = " Book Title: \n Author: \n Published: "
 
-        # Entertainment
-
-        elif value == " " or value == " " or value == " " or value == " ":
-            screen_manager.get_screen('chats').chat_list.add_widget(ResponseImage(source="images/entertainment/MBY.png"))
-            response = f" Book Title: \n Author: \n Published: "
-
-        elif value == " " or value == " " or value == " " or value == " ":
-            screen_manager.get_screen('chats').chat_list.add_widget(ResponseImage(source="images/entertainment/MBY.png"))
-            response = f" Book Title: \n Author: \n Published: "
-
-        elif value == " " or value == " " or value == " " or value == " ":
-            screen_manager.get_screen('chats').chat_list.add_widget(ResponseImage(source="images/entertainment/MBY.png"))
-            response = f" Book Title: \n Author: \n Published: "
-
-        elif value == " " or value == " " or value == " " or value == " ":
-            screen_manager.get_screen('chats').chat_list.add_widget(ResponseImage(source="images/entertainment/MBY.png"))
-            response = f" Book Title: \n Author: \n Published: "
-
-        elif value == " " or value == " " or value == " " or value == " ":
-            screen_manager.get_screen('chats').chat_list.add_widget(ResponseImage(source="images/entertainment/MBY.png"))
-            response = f" Book Title: \n Author: \n Published: "
-
-        elif value == " " or value == " " or value == " " or value == " ":
-            screen_manager.get_screen('chats').chat_list.add_widget(ResponseImage(source="images/entertainment/MBY.png"))
-            response = f" Book Title: \n Author: \n Published: "
-
-        elif value == " " or value == " " or value == " " or value == " ":
-            screen_manager.get_screen('chats').chat_list.add_widget(ResponseImage(source="images/entertainment/MBY.png"))
-            response = f" Book Title: \n Author: \n Published: "
-
-        elif value == " " or value == " " or value == " " or value == " ":
-            screen_manager.get_screen('chats').chat_list.add_widget(ResponseImage(source="images/entertainment/MBY.png"))
-            response = f" Book Title: \n Author: \n Published: "
-
-        elif value == " " or value == " " or value == " " or value == " ":
-            screen_manager.get_screen('chats').chat_list.add_widget(ResponseImage(source="images/entertainment/MBY.png"))
-            response = f" Book Title: \n Author: \n Published: "
-
-        elif value == " " or value == " " or value == " " or value == " ":
-            screen_manager.get_screen('chats').chat_list.add_widget(ResponseImage(source="images/entertainment/MBY.png"))
-            response = f" Book Title: \n Author: \n Published: "
 
         else:
             response = "Sorry could you say that again?"
