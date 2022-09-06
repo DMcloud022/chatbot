@@ -1,0 +1,82 @@
+MDScreen:
+    name: "main"
+    bot_name: bot_name
+    MDFloatLayout:
+        md_bg_color: 1, 1, 1, 1
+        Image:
+            source: "chatbot.png"
+            size_hint: .6, .3
+            pos_hint: {"center_x": .5, "center_y": .8}
+        MDLabel:
+            text: "BIBLIOTECA"
+            font_name: "Poppins-SemiBold.ttf"
+            font_size: "35sp"
+            pos_hint: {"center_x": .5,  "center_y": .58}
+            halign: "center"
+            theme_text_color: "Custom"
+            text_color: 53/255, 56/255, 60/255, 1
+        MDLabel:
+            text: "A fresh and easy way to borrow and read books."
+            size_hint_x: .9
+            font_name: "Poppins"
+            font_size: "15sp"
+            pos_hint: {"center_x": .5,  "center_y": .45}
+            halign: "center"
+            theme_text_color: "Custom"
+            text_color: 53/255, 56/255, 60/255, 1
+        MDLabel:
+            text: "COURSE: INTELLIGENT AGENTS"
+            font_name: "Poppins"
+            font_size: "15sp"
+            pos_hint: {"center_x": .5,  "center_y": .33}
+            halign: "center"
+            theme_text_color: "Custom"
+            text_color: 0,0,139
+        MDFloatLayout:
+            size_hint: .85, .08
+            pos_hint: {"center_x": .5, "center_y": .22}
+            canvas:
+                Color:
+                    rgb: (238/255, 238/255, 238/255, 1)
+                RoundedRectangle:
+                    size: self.size
+                    pos: self.pos
+                    radius: [22, 22, 22, 22]
+            TextInput:
+                id: bot_name
+                hint_text: "What's your name?"
+                size_hint: 1, None
+                pos_hint: {"center_x": .5, "center_y": .5}
+                font_size: "15sp"
+                height: self.minimum_height
+                cursor_color: 0,0,0
+                cursor_width: "2sp"
+                foreground_color: 0,0,0
+                background_color: 0,0,0,0
+                padding: 15
+                font_name: "Poppins"
+                halign: "center"
+        MDFloatLayout:
+            size_hint: .45, .08
+            pos_hint: {"center_x": .5, "center_y": .1}
+            canvas:
+                Color:
+                    rgb: (0,0,139)
+                RoundedRectangle:
+                    size: self.size
+                    pos: self.pos
+                    radius: [22, 22, 22, 22]
+        Button:
+            text: "Start Now!"
+            size_hint: .45, .08
+            pos_hint: {"center_x": .5, "center_y": .1}
+            background_color: 0,0,0,0
+            on_release:
+                app.bot_name()
+        MDLabel:
+            text: ""
+            halign: "center"
+            pos_hint: { "center_y": .1}
+            font_name: "Poppins-SemiBold.ttf"
+            font_size: "18sp"
+            color: 1,1,1,1
