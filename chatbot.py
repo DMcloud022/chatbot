@@ -55,7 +55,7 @@ class ChatBot(MDApp):
         elif value == "Biblioteca" or value == "biblioteca" or value == "app" or value == "App" or value =='1':
             response = "Biblioteca is a library system that can help you access different fictional and non-fictional books in one single app.\n\n Type 'help' for more information."
         elif value == "Books" or value == "books" or value == "book" or value == "Book" or value == "Genre" or value == "genre" or value == "Book genre" or value == '2':
-            response ="Lucy: The genres available in this app are:\n\n Fiction\n Non Fiction\n Academic"
+            response ="Lucy: The genres available in this app are:\n\n Fiction\n Non Fiction\n Academic\n Entertainment"
         elif value == "Service" or value == "service" or value == "services" or value == "Services" or value == '3':
             response ="This application provides the following:\n\n1. This application provides list of books available in the Bibilioteca mobile application that you can borrow.\n2. It provides ... \n3. It provides ...\n\n Type 'help' for more information."
         elif value == "Developers" or value == "developers" or value == "Devs" or value == "devs" or value =='4':
@@ -86,48 +86,52 @@ class ChatBot(MDApp):
         elif value == "Academic" or value == "academic" or value == "acad" or value == "Acad" or value == "educational" or value == "Educational":
             screen_manager.get_screen('chats').chat_list.add_widget(ResponseImage(source="images/img_cat/bg.png"))
             response = "1. Book 1\n2. Book 2\n3. Book 3"
+            # Entertainment books (All)
+        elif value == "Entertainment" or value == "entertainment" or value == "manga" or value == "Manga" or value == "manhwa" or value == "Manhwa":
+            screen_manager.get_screen('chats').chat_list.add_widget(ResponseImage(source="images/img_cat/bg.png"))
+            response = "1. Book 1\n2. Book 2\n3. Book 3"
 
         # FICTION
 
         elif value == "Sea of Tranquility" or value == "sea of tranquility":
             screen_manager.get_screen('chats').chat_list.add_widget(ResponseImage(source="images/fiction/SoT.png"))
-            response = f" Book Title: Sea of Tranquility\n Author: Emily St. John Mandel\n Published: April 5, 2022"
+            response = " Book Title: Sea of Tranquility\n Author: Emily St. John Mandel\n Published: April 5, 2022"
 
         elif value == "Game of Thrones" or value == "game of thrones" or value == "a game of thrones" or value == "A Game of Thrones":
             screen_manager.get_screen('chats').chat_list.add_widget(ResponseImage(source="images/fiction/AGoT.png"))
-            response = f" Book Title: A Game of Thrones\n Author: George R.R. Martin\n Published: August 1, 1996"
+            response = " Book Title: A Game of Thrones\n Author: George R.R. Martin\n Published: August 1, 1996"
 
         elif value == "Fifty Shades of Grey" or value == "fifty shades of grey" or value == "50 shades of grey" or value == "50 Shades of Grey" or value == "50 Shades" or value == "50 shades":
             screen_manager.get_screen('chats').chat_list.add_widget(ResponseImage(source="images/fiction/FSG.png"))
-            response = f" Book Title: Fifty Shades of Grey\n Author: E. L. James\n Published: June 20, 2011"
+            response = " Book Title: Fifty Shades of Grey\n Author: E. L. James\n Published: June 20, 2011"
 
         elif value == "To Paradise" or value == "to paradise":
             screen_manager.get_screen('chats').chat_list.add_widget(ResponseImage(source="images/fiction/TP.png"))
-            response = f" Book Title: To Paradise\n Author: Hanya Yanagihara\n Published: January 11, 2022"
+            response = " Book Title: To Paradise\n Author: Hanya Yanagihara\n Published: January 11, 2022"
 
         elif value == "Pride and Prejudice" or value == "pride and prejudice":
             screen_manager.get_screen('chats').chat_list.add_widget(ResponseImage(source="images/fiction/PaP.png"))
-            response = f" Book Title: Pride and Prejudice\n Author: Jane Austin\n Published: January 28, 1813"
+            response = " Book Title: Pride and Prejudice\n Author: Jane Austin\n Published: January 28, 1813"
 
         elif value == "The Lord of the Rings" or value == "the lord of the rings" or value == "lord of the rings" or value == "Lord of the Rings" or value == "The Lord of the Ring" or value == "the lord of the ring" or value == "lord of the ring" or value == "Lord of the Ring":
             screen_manager.get_screen('chats').chat_list.add_widget(ResponseImage(source="images/fiction/LOR.png"))
-            response = f" Book Title: The Lord of the Rings\n Author: J. R. R. Tolkien\n Published: July 26, 1954"
+            response = " Book Title: The Lord of the Rings\n Author: J. R. R. Tolkien\n Published: July 26, 1954"
 
         elif value == "Harry Potter and the Deathly Hallows" or value == "harry potter and the deathly hallows" or value == "harry potter" or value == "Harry Potter" or value == "deathly hallows" or value == "Deathly Hallows":
             screen_manager.get_screen('chats').chat_list.add_widget(ResponseImage(source="images/fiction/HPDH.png"))
-            response = f" Book Title: Harry Potter and the Deathly Hallows\n Author: J.K. Rowling\n Published: July 21, 2007"
+            response = " Book Title: Harry Potter and the Deathly Hallows\n Author: J.K. Rowling\n Published: July 21, 2007"
 
         elif value == "The Notebook" or value == "the notebook" or value == "notebook" or value == "Notebook":
             screen_manager.get_screen('chats').chat_list.add_widget(ResponseImage(source="images/fiction/TN.png"))
-            response = f" Book Title: The Notebook\n Author: Nicholas Sparks\n Published: October 1, 1996"
+            response = " Book Title: The Notebook\n Author: Nicholas Sparks\n Published: October 1, 1996"
 
         elif value == "The Fault in Our Stars" or value == "the fault in our stars" or value == "Fault in Our Stars" or value == "fault in our stars":
             screen_manager.get_screen('chats').chat_list.add_widget(ResponseImage(source="images/fiction/TFIOS.png"))
-            response = f" Book Title: The Fault in Our Stars\n Author: John Green\n Published: January 10, 2012"
+            response = " Book Title: The Fault in Our Stars\n Author: John Green\n Published: January 10, 2012"
 
         elif value == "Me Before You" or value == "me before you":
             screen_manager.get_screen('chats').chat_list.add_widget(ResponseImage(source="images/fiction/MBY.png"))
-            response = f" Book Title: Me Before You\n Author: Jojo Moyes\n Published: January 5, 2012"
+            response = " Book Title: Me Before You\n Author: Jojo Moyes\n Published: January 5, 2012"
 
         # NON - FICTION
         # possible keyword
@@ -135,84 +139,126 @@ class ChatBot(MDApp):
             # edit image location
             screen_manager.get_screen('chats').chat_list.add_widget(ResponseImage(source="images/non_fiction/MBY.png"))
 
-            response = f" Book Title: \n Author: \n Published: "
+            response = " Book Title: \n Author: \n Published: "
 
         elif value == " " or value == " " or value == " " or value == " ":
             screen_manager.get_screen('chats').chat_list.add_widget(ResponseImage(source="images/non_fiction/MBY.png"))
-            response = f" Book Title: \n Author: \n Published: "
+            response = " Book Title: \n Author: \n Published: "
 
         elif value == " " or value == " " or value == " " or value == " ":
             screen_manager.get_screen('chats').chat_list.add_widget(ResponseImage(source="images/non_fiction/MBY.png"))
-            response = f" Book Title: \n Author: \n Published: "
+            response = " Book Title: \n Author: \n Published: "
 
         elif value == " " or value == " " or value == " " or value == " ":
             screen_manager.get_screen('chats').chat_list.add_widget(ResponseImage(source="images/non_fiction/MBY.png"))
-            response = f" Book Title: \n Author: \n Published: "
+            response = " Book Title: \n Author: \n Published: "
 
         elif value == " " or value == " " or value == " " or value == " ":
             screen_manager.get_screen('chats').chat_list.add_widget(ResponseImage(source="images/non_fiction/MBY.png"))
-            response = f" Book Title: \n Author: \n Published: "
+            response = " Book Title: \n Author: \n Published: "
 
         elif value == " " or value == " " or value == " " or value == " ":
             screen_manager.get_screen('chats').chat_list.add_widget(ResponseImage(source="images/non_fiction/MBY.png"))
-            response = f" Book Title: \n Author: \n Published: "
+            response = " Book Title: \n Author: \n Published: "
 
         elif value == " " or value == " " or value == " " or value == " ":
             screen_manager.get_screen('chats').chat_list.add_widget(ResponseImage(source="images/non_fiction/MBY.png"))
-            response = f" Book Title: \n Author: \n Published: "
+            response = " Book Title: \n Author: \n Published: "
 
         elif value == " " or value == " " or value == " " or value == " ":
             screen_manager.get_screen('chats').chat_list.add_widget(ResponseImage(source="images/non_fiction/MBY.png"))
-            response = f" Book Title: \n Author: \n Published: "
+            response = " Book Title: \n Author: \n Published: "
 
         elif value == " " or value == " " or value == " " or value == " ":
             screen_manager.get_screen('chats').chat_list.add_widget(ResponseImage(source="images/non_fiction/MBY.png"))
-            response = f" Book Title: \n Author: \n Published: "
+            response = " Book Title: \n Author: \n Published: "
 
         elif value == " " or value == " " or value == " " or value == " ":
             screen_manager.get_screen('chats').chat_list.add_widget(ResponseImage(source="images/non_fiction/MBY.png"))
-            response = f" Book Title: \n Author: \n Published: "
+            response = " Book Title: \n Author: \n Published: "
 
         # Academic
 
         elif value == " " or value == " " or value == " " or value == " ":
             screen_manager.get_screen('chats').chat_list.add_widget(ResponseImage(source="images/academic/MBY.png"))
-            response = f" Book Title: \n Author: \n Published: "
+            response = " Book Title: \n Author: \n Published: "
 
         elif value == " " or value == " " or value == " " or value == " ":
             screen_manager.get_screen('chats').chat_list.add_widget(ResponseImage(source="images/academic/MBY.png"))
-            response = f" Book Title: \n Author: \n Published: "
+            response = " Book Title: \n Author: \n Published: "
 
         elif value == " " or value == " " or value == " " or value == " ":
             screen_manager.get_screen('chats').chat_list.add_widget(ResponseImage(source="images/academic/MBY.png"))
-            response = f" Book Title: \n Author: \n Published: "
+            response = " Book Title: \n Author: \n Published: "
 
         elif value == " " or value == " " or value == " " or value == " ":
             screen_manager.get_screen('chats').chat_list.add_widget(ResponseImage(source="images/academic/MBY.png"))
-            response = f" Book Title: \n Author: \n Published: "
+            response = " Book Title: \n Author: \n Published: "
 
         elif value == " " or value == " " or value == " " or value == " ":
             screen_manager.get_screen('chats').chat_list.add_widget(ResponseImage(source="images/academic/MBY.png"))
-            response = f" Book Title: \n Author: \n Published: "
+            response = " Book Title: \n Author: \n Published: "
 
         elif value == " " or value == " " or value == " " or value == " ":
             screen_manager.get_screen('chats').chat_list.add_widget(ResponseImage(source="images/academic/MBY.png"))
-            response = f" Book Title: \n Author: \n Published: "
+            response = " Book Title: \n Author: \n Published: "
 
         elif value == " " or value == " " or value == " " or value == " ":
             screen_manager.get_screen('chats').chat_list.add_widget(ResponseImage(source="images/academic/MBY.png"))
-            response = f" Book Title: \n Author: \n Published: "
+            response = " Book Title: \n Author: \n Published: "
 
         elif value == " " or value == " " or value == " " or value == " ":
             screen_manager.get_screen('chats').chat_list.add_widget(ResponseImage(source="images/academic/MBY.png"))
-            response = f" Book Title: \n Author: \n Published: "
+            response = " Book Title: \n Author: \n Published: "
 
         elif value == " " or value == " " or value == " " or value == " ":
             screen_manager.get_screen('chats').chat_list.add_widget(ResponseImage(source="images/academic/MBY.png"))
-            response = f" Book Title: \n Author: \n Published: "
+            response = " Book Title: \n Author: \n Published: "
 
         elif value == " " or value == " " or value == " " or value == " ":
             screen_manager.get_screen('chats').chat_list.add_widget(ResponseImage(source="images/academic/MBY.png"))
+            response = " Book Title: \n Author: \n Published: "
+
+        # Entertainment
+
+        elif value == " " or value == " " or value == " " or value == " ":
+            screen_manager.get_screen('chats').chat_list.add_widget(ResponseImage(source="images/entertainment/MBY.png"))
+            response = f" Book Title: \n Author: \n Published: "
+
+        elif value == " " or value == " " or value == " " or value == " ":
+            screen_manager.get_screen('chats').chat_list.add_widget(ResponseImage(source="images/entertainment/MBY.png"))
+            response = f" Book Title: \n Author: \n Published: "
+
+        elif value == " " or value == " " or value == " " or value == " ":
+            screen_manager.get_screen('chats').chat_list.add_widget(ResponseImage(source="images/entertainment/MBY.png"))
+            response = f" Book Title: \n Author: \n Published: "
+
+        elif value == " " or value == " " or value == " " or value == " ":
+            screen_manager.get_screen('chats').chat_list.add_widget(ResponseImage(source="images/entertainment/MBY.png"))
+            response = f" Book Title: \n Author: \n Published: "
+
+        elif value == " " or value == " " or value == " " or value == " ":
+            screen_manager.get_screen('chats').chat_list.add_widget(ResponseImage(source="images/entertainment/MBY.png"))
+            response = f" Book Title: \n Author: \n Published: "
+
+        elif value == " " or value == " " or value == " " or value == " ":
+            screen_manager.get_screen('chats').chat_list.add_widget(ResponseImage(source="images/entertainment/MBY.png"))
+            response = f" Book Title: \n Author: \n Published: "
+
+        elif value == " " or value == " " or value == " " or value == " ":
+            screen_manager.get_screen('chats').chat_list.add_widget(ResponseImage(source="images/entertainment/MBY.png"))
+            response = f" Book Title: \n Author: \n Published: "
+
+        elif value == " " or value == " " or value == " " or value == " ":
+            screen_manager.get_screen('chats').chat_list.add_widget(ResponseImage(source="images/entertainment/MBY.png"))
+            response = f" Book Title: \n Author: \n Published: "
+
+        elif value == " " or value == " " or value == " " or value == " ":
+            screen_manager.get_screen('chats').chat_list.add_widget(ResponseImage(source="images/entertainment/MBY.png"))
+            response = f" Book Title: \n Author: \n Published: "
+
+        elif value == " " or value == " " or value == " " or value == " ":
+            screen_manager.get_screen('chats').chat_list.add_widget(ResponseImage(source="images/entertainment/MBY.png"))
             response = f" Book Title: \n Author: \n Published: "
 
         else:
