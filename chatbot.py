@@ -42,11 +42,17 @@ class ChatBot(MDApp):
             screen_manager.get_screen('chats').bot_name.text = screen_manager.get_screen('main').bot_name.text
             screen_manager.current = "chats"
 
+    # def exitFunction(self):
+    #     App.get_running_app().stop()
+    #     Window.close()
+
 
     def response(self, *args):
         response =""
         if value == "Hello" or value == "hello" or value == "start" or value == "Start" or value == "hi"or value == "Hi":
             response = f"Hello {screen_manager.get_screen('chats').bot_name.text}, I am Lucy your Personal Assistant for today. How can I help you?\n\n1. Project Biblioteca\n2. Book Genres\n3. Application Services\n4. The Developers\n\n Type 'help' for more information."
+        elif value == "Exit" or value == "Close" or value == "Quit" or value == "exit" or value == "close"or value == "quit":
+            response = ""
         elif value == "Menu" or value == "menu" or value == "Main" or value == "main" or value == "back"or value == "Back":
             response = "--- MAIN MENU ---\n\n1. Project Biblioteca\n2. Book Genres\n3. Application Services\n4. The Developers\n\n Type 'help' for more information."
 
@@ -64,6 +70,12 @@ class ChatBot(MDApp):
             response = "Lucy: These are the keywords that you can use to navigate the app.\n\nbiblioteca - project information\ndevs - the developers\nbooks - list of books\nfiction - fictional books"
         # Optional
         elif value == "best" or value == "Best" or value == "top" or value == "Top":
+            #screen_manager.get_screen('chats').chat_list.add_widget(ResponseImage(source="images/best/bestFiveBooks.png"))
+            screen_manager.get_screen('chats').chat_list.add_widget(ResponseImage(source="images/best/Sadako and the Thousand Paper Cranes.png"))
+            screen_manager.get_screen('chats').chat_list.add_widget(ResponseImage(source="images/best/House of Furies by Madeleine Roux.png"))
+            screen_manager.get_screen('chats').chat_list.add_widget(ResponseImage(source="images/best/Alone With You in the Ether by Olivia Blake.png"))
+            screen_manager.get_screen('chats').chat_list.add_widget(ResponseImage(source="images/best/A Gentle Reminder by Bianca.png"))
+            screen_manager.get_screen('chats').chat_list.add_widget(ResponseImage(source="images/best/A Walk to Remember by Nicholas Sparks.png"))
             response ="--- TOP 5 BOOKS ---\n\n1. Sadako and the Thousand Paper Cranes by Eleanor Coerr\n2. House of Furies by Madeleine Roux\
             \n3. Alone With You in the Ether by Olivia Blake\n4. A Gentle Reminder by Bianca Sparacino\
             \n5.  A Walk to Remember by Nicholas Sparks\n\n Type 'help' for more information."
@@ -86,18 +98,25 @@ class ChatBot(MDApp):
 
         elif value == "Stop" or value == "stop" or value == "done" or value == "Done" or value =='out'or value =='Out':
             response = "Lucy: Thank you for using our application."
+           
             # Fictional books (All)
         elif value == "Fiction" or value == "fiction":
             screen_manager.get_screen('chats').chat_list.add_widget(ResponseImage(source="images/img_cat/bg.png"))
-            response = "FICTIONAL\n\n1. Sea of Tranquility\n2. Game of Thrones\n3. Fifty Shades of Grey"
+            response = "FICTIONAL\n\n1. Harry Potter and the Deathly Hallows\n2. Game of Thrones\n3. Fifty Shades of Grey\
+            \n4. Me Before You\n5. Pride and Prejudice\n6. Sea of Tranquility\n7. The Fault in Our Stars\n8. The Lord of the Rings\
+            \n9. The Notebook\n10. To Paradise " 
+
+           
             # Non-Fictional books (All)
         elif value == "Non-Fiction" or value == "non-fiction" or value == "non fiction" or value == "Non fiction" or value == "not fiction" or value == "Not fiction":
             screen_manager.get_screen('chats').chat_list.add_widget(ResponseImage(source="images/img_cat/bg.png"))
             response = "1. Book 1\n2. Book 2\n3. Book 3"
+           
             # Academic books (All)
         elif value == "Academic" or value == "academic" or value == "acad" or value == "Acad" or value == "educational" or value == "Educational":
             screen_manager.get_screen('chats').chat_list.add_widget(ResponseImage(source="images/img_cat/bg.png"))
             response = "1. Book 1\n2. Book 2\n3. Book 3"
+           
             # Entertainment books (All)
         elif value == "Entertainment" or value == "entertainment" or value == "manga" or value == "Manga" or value == "manhwa" or value == "Manhwa":
             screen_manager.get_screen('chats').chat_list.add_widget(ResponseImage(source="images/img_cat/bg.png"))
