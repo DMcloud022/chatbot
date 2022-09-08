@@ -42,17 +42,12 @@ class ChatBot(MDApp):
             screen_manager.get_screen('chats').bot_name.text = screen_manager.get_screen('main').bot_name.text
             screen_manager.current = "chats"
 
-    # def exitFunction(self):
-    #     App.get_running_app().stop()
-    #     Window.close()
-
 
     def response(self, *args):
         response =""
         if value == "Hello" or value == "hello" or value == "start" or value == "Start" or value == "hi"or value == "Hi":
+            screen_manager.get_screen('chats').chat_list.add_widget(ResponseImage(source="images/librarian.png"))
             response = f"Hello {screen_manager.get_screen('chats').bot_name.text}, I am Lucy your Personal Assistant for today. How can I help you?\n\n1. Project Biblioteca\n2. Book Genres\n3. Application Services\n4. The Developers\n\n Type 'help' for more information."
-        elif value == "Exit" or value == "Close" or value == "Quit" or value == "exit" or value == "close"or value == "quit":
-            response = ""
         elif value == "Menu" or value == "menu" or value == "Main" or value == "main" or value == "back"or value == "Back":
             response = "--- MAIN MENU ---\n\n1. Project Biblioteca\n2. Book Genres\n3. Application Services\n4. The Developers\n\n Type 'help' for more information."
 
