@@ -54,11 +54,11 @@ class ChatBot(MDApp):
 
         # Menu Navigation
         elif value == "Biblioteca" or value == "biblioteca" or value == "app" or value == "App" or value =='1':
-            response = "Biblioteca is a library system that can help you access different fictional and non-fictional books in one single app.\n\n Type 'help' for more information."
+            response = "Biblioteca is an online library system that allows their users to browse books from their catalouge and borrow those books to read them in the comfort of their homes, Users would be able access different fictional, non-fictional, educational and entertainment books in one single app. \n\nBiblioteca is also equipped with a chatbot to help entertain any questions or concerns of the users, That chatbot is the one you're currently using!! Chatbot is more than willing to hear any questions that you have.\nType 'help' for more information."
         elif value == "Books" or value == "books" or value == "book" or value == "Book" or value == "Genre" or value == "genre" or value == "Book genre" or value == '2':
             response ="Lucy: The genres available in this app are:\n\n Fiction\n Non Fiction\n Academic\n Entertainment"
         elif value == "Service" or value == "service" or value == "services" or value == "Services" or value == '3':
-            response ="This application provides the following:\n\n1. This application provides list of books available in the Bibilioteca mobile application that you can borrow.\n2. It provides ... \n3. It provides ...\n\n Type 'help' for more information."
+            response ="This application provides the following:\n\n1. This application provides list of books available in the Bibilioteca mobile application that you can borrow.\n2. It provides ... \n3. It provides ...\n\n\nType 'help' for more information."
         elif value == "Developers" or value == "developers" or value == "Devs" or value == "devs" or value =='4':
             response ="--- DEVELOPERS ---\n\n1. Florencio, Daniel\n2. Herrera, Mikaela\n3. Medrano, Yvette\n4. Noprada, Shane\n5. Revilla, Aarone\n\n Type 'help' for more information."
         elif value == "Help" or value == "help" or value == "info" or value == "Info":
@@ -105,7 +105,7 @@ class ChatBot(MDApp):
             # Non-Fictional books (All)
         elif value == "Non-Fiction" or value == "non-fiction" or value == "non fiction" or value == "Non fiction" or value == "not fiction" or value == "Not fiction":
             screen_manager.get_screen('chats').chat_list.add_widget(ResponseImage(source="images/img_cat/bg.png"))
-            response = "1. Book 1\n2. Book 2\n3. Book 3"
+            response = "1. The Reluctant Carer\n2. Queen of Our Times\n3. The Book of Minds\n4. The Colour of Madness\n5. Scary Smart\n6. The Diary of a Young Girl\n7. Quiet\n8. A Room of One's Own\n9. Atomic Habits\n10. Educated"
            
             # Academic books (All)
         elif value == "Academic" or value == "academic" or value == "acad" or value == "Acad" or value == "educational" or value == "Educational":
@@ -116,6 +116,8 @@ class ChatBot(MDApp):
         elif value == "Entertainment" or value == "entertainment" or value == "manga" or value == "Manga" or value == "manhwa" or value == "Manhwa":
             screen_manager.get_screen('chats').chat_list.add_widget(ResponseImage(source="images/img_cat/bg.png"))
             response = "1. Book 1\n2. Book 2\n3. Book 3"
+
+          
 
         # FICTION
         elif value == "Sea of Tranquility" or value == "sea of tranquility":
@@ -160,47 +162,49 @@ class ChatBot(MDApp):
 
         # NON - FICTION
         # possible keyword
-        elif value == "" or value == "" or value == "" or value == " " or value == " ":
+        elif value == "The Reluctant Carer" or value == "the reluctant carer" or value == "Reluctant Carer" or value == "reluctant carer":
             # edit image location
-            screen_manager.get_screen('chats').chat_list.add_widget(ResponseImage(source="images/non_fiction/MBY.png"))
+            screen_manager.get_screen('chats').chat_list.add_widget(ResponseImage(source="images/non_fiction/reluctant_carer.png"))
 
-            response = " Book Title: \n Author: \n Published: "
+            response = " Book Title: The Reluctant Carer: Dispatches from the Edge of Life\n Author: Chris Haughton\n Published: June 2022 "
 
-        elif value == " " or value == " " or value == " " or value == " ":
-            screen_manager.get_screen('chats').chat_list.add_widget(ResponseImage(source="images/non_fiction/MBY.png"))
-            response = " Book Title: \n Author: \n Published: "
+        elif value == "Queen of Our Times" or value == "queen of our times" or value == "queen of our time" or value == "Queen of Our Time":
+            screen_manager.get_screen('chats').chat_list.add_widget(ResponseImage(source="images/non_fiction/queen_of_our_times.png"))
+            response = " Book Title: Queen of Our Times The Life of Queen Elizabeth II\n Author: Robert Hardman\n Published: March 2022"
 
-        elif value == " " or value == " " or value == " " or value == " ":
-            screen_manager.get_screen('chats').chat_list.add_widget(ResponseImage(source="images/non_fiction/MBY.png"))
-            response = " Book Title: \n Author: \n Published: "
+        elif value == "The Book of Minds" or value == "Book of Minds" or value == "book of minds" or value == "Book of Minds":
+            screen_manager.get_screen('chats').chat_list.add_widget(ResponseImage(source="images/non_fiction/book_of_minds.png"))
+            response = " Book Title: The Book of Minds: How to Understand Ourselves and Other Beings, From Animals to Aliens\n Author: Philip Ball\n Published: June 2022"
 
-        elif value == " " or value == " " or value == " " or value == " ":
-            screen_manager.get_screen('chats').chat_list.add_widget(ResponseImage(source="images/non_fiction/MBY.png"))
-            response = " Book Title: \n Author: \n Published: "
+        elif value == "Scary Smart" or value == "scary smart":
+            screen_manager.get_screen('chats').chat_list.add_widget(ResponseImage(source="images/non_fiction/scary_smart.png"))
+            response = " Book Title: Scary Smart: The Future of Artificial Intelligence and How You Can Save Our World \n Author: Mo Gawdat\n Published: 2021"
 
-        elif value == " " or value == " " or value == " " or value == " ":
-            screen_manager.get_screen('chats').chat_list.add_widget(ResponseImage(source="images/non_fiction/MBY.png"))
-            response = " Book Title: \n Author: \n Published: "
+        elif value == "The Diary of a Young Girl" or value == "the diary of a young girl" or value == "Diary of a Young Girl" or value == "diary of a young girl":
+            screen_manager.get_screen('chats').chat_list.add_widget(ResponseImage(source="images/non_fiction/diary_of_young_girl.png"))
+            response = " Book Title: The Diary of a Young Girl\n Author: Anne Frank\n Published: June 25, 1947"
 
-        elif value == " " or value == " " or value == " " or value == " ":
-            screen_manager.get_screen('chats').chat_list.add_widget(ResponseImage(source="images/non_fiction/MBY.png"))
-            response = " Book Title: \n Author: \n Published: "
+        elif value == "Quiet" or value == "quiet":
+            screen_manager.get_screen('chats').chat_list.add_widget(ResponseImage(source="images/non_fiction/quiet.png"))
+            response = " Book Title: Quiet: The Power of Introverts in a World that Can't Stop Talking\n Author: Susan Cain\n Published: January 24, 2012"
 
-        elif value == " " or value == " " or value == " " or value == " ":
-            screen_manager.get_screen('chats').chat_list.add_widget(ResponseImage(source="images/non_fiction/MBY.png"))
-            response = " Book Title: \n Author: \n Published: "
+        elif value == "A Room of One's Own" or value == "Room of One's Own" or value == "a room of one's own" or value == "room of one's own":
+            screen_manager.get_screen('chats').chat_list.add_widget(ResponseImage(source="images/non_fiction/room_of_ones_own.png"))
+            response = " Book Title: A Room of One's Own\n Author: Virginia Woolf\n Published: September 1929"
 
-        elif value == " " or value == " " or value == " " or value == " ":
-            screen_manager.get_screen('chats').chat_list.add_widget(ResponseImage(source="images/non_fiction/MBY.png"))
-            response = " Book Title: \n Author: \n Published: "
+        elif value == "Atomic Habits" or value == "atomic habits":
+            screen_manager.get_screen('chats').chat_list.add_widget(ResponseImage(source="images/non_fiction/atomic_habits.png"))
+            response = " Book Title: Atomic Habits: An Easy & Proven Way to Build Good Habits & Break\n Author: James Clear\n Published: October 16, 2018"
 
-        elif value == " " or value == " " or value == " " or value == " ":
-            screen_manager.get_screen('chats').chat_list.add_widget(ResponseImage(source="images/non_fiction/MBY.png"))
-            response = " Book Title: \n Author: \n Published: "
+        elif value == "Educated" or value == "educated":
+            screen_manager.get_screen('chats').chat_list.add_widget(ResponseImage(source="images/non_fiction/educated.png"))
+            response = " Book Title: Educated\n Author: Tara Westover \n Published: February 18, 2018"
 
-        elif value == " " or value == " " or value == " " or value == " ":
-            screen_manager.get_screen('chats').chat_list.add_widget(ResponseImage(source="images/non_fiction/MBY.png"))
-            response = " Book Title: \n Author: \n Published: "
+        elif value == "The Colour of Madness" or value == "the colour of madness" or value == "Colour of Madness" or value == "colour of madness":
+            screen_manager.get_screen('chats').chat_list.add_widget(ResponseImage(source="images/non_fiction/colour_of_madness.png"))
+            response = " Book Title: The Colour of Madness: Exploring BAME mental health in the UK\n Author: Samara Linton \n Published: September 2018"
+
+        
 
         # Academic
 
