@@ -268,6 +268,10 @@ class ChatBot(MDApp):
             screen_manager.get_screen('chats').chat_list.add_widget(Command(text=value, size_hint_x=size, halign=halign))
             Clock.schedule_once(self.response, 2)
             screen_manager.get_screen('chats').text_input.text = ""
+    
+    def back(self):
+        Builder.load_file("Main.kv")
+
 
 if __name__ == '__main__':
     LabelBase.register(name="Poppins", fn_regular="Poppins-Regular.ttf")

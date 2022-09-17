@@ -44,8 +44,10 @@ MDScreen:
     chat_list: chat_list
     name: "chats"
     MDFloatLayout:
+        FitImage:
+            source: "chat_background.jpg"
         MDFloatLayout:
-            md_bg_color: 245/255, 245/255, 245/255, 1
+        
             size_hint_y: .11
             pos_hint: {"center_y": .95}
             MDLabel:
@@ -57,6 +59,17 @@ MDScreen:
                 font_size: "25sp"
                 theme_text_color: "Custom"
                 text_color: 53/255, 56/255, 60/255, 1
+                
+        MDIconButton:
+            icon: "back"
+            pos_hint: {"center_x": .1, "center_y": .95}
+            user_font_size: "16sp"
+            theme_text_color: "Custom"
+            text_color: 0,0,0,0
+            md_bg_color: 245/255, 245/255, 245/255, 1
+            on_release: app.back()  
+        
+   
         ScrollView:
             size_hint_y: .77
             pos_hint: {"x":0, "y": .116}
@@ -78,12 +91,15 @@ MDScreen:
                 size_hint: .8, .75
                 pos_hint: {"center_x": .43, "center_y": .5}
                 canvas:
+                    
                     Color:
                         rgb: (238/255, 238/255, 238/255, 1)
                     RoundedRectangle:
                         size: self.size
                         pos: self.pos
                         radius: [23, 23, 23, 23]
+                        source: "chat_background.jpg"
+                        
                 TextInput:
                     id: text_input
                     hint_text: "Type 'start' to begin..."
@@ -97,6 +113,8 @@ MDScreen:
                     background_color: 0,0,0,0
                     padding: 15
                     font_name: "Poppins"
+                    
+
             MDIconButton:
                 icon: "send"
                 pos_hint: {"center_x": .91, "center_y": .5}
