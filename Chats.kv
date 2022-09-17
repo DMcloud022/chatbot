@@ -7,7 +7,7 @@
     text_color: 1,1,1,1
     canvas.before:
         Color:
-            rgb: (0,0,128)
+            rgb: 0.10,0.25,1.00
         RoundedRectangle:
             size: self.width, self.height
             pos: self.pos
@@ -47,7 +47,7 @@ MDScreen:
         FitImage:
             source: "chat_background.jpg"
         MDFloatLayout:
-        
+            md_bg_color: 1,1,1,.8
             size_hint_y: .11
             pos_hint: {"center_y": .95}
             MDLabel:
@@ -58,18 +58,8 @@ MDScreen:
                 font_name: "Poppins-SemiBold.ttf"
                 font_size: "25sp"
                 theme_text_color: "Custom"
-                text_color: 53/255, 56/255, 60/255, 1
-                
-        MDIconButton:
-            icon: "back"
-            pos_hint: {"center_x": .1, "center_y": .95}
-            user_font_size: "16sp"
-            theme_text_color: "Custom"
-            text_color: 0,0,0,0
-            md_bg_color: 245/255, 245/255, 245/255, 1
-            on_release: app.back()  
+                text_color: 0,0,0
         
-   
         ScrollView:
             size_hint_y: .77
             pos_hint: {"x":0, "y": .116}
@@ -98,7 +88,7 @@ MDScreen:
                         size: self.size
                         pos: self.pos
                         radius: [23, 23, 23, 23]
-                        source: "chat_background.jpg"
+                        
                         
                 TextInput:
                     id: text_input
@@ -117,9 +107,9 @@ MDScreen:
 
             MDIconButton:
                 icon: "send"
-                pos_hint: {"center_x": .91, "center_y": .5}
-                user_font_size: "16sp"
+                pos_hint: {"center_x": .92, "center_y": .5}
+                user_font_size: "17sp"
                 theme_text_color: "Custom"
                 text_color: 1,1,1,1
-                md_bg_color: 0,0,139
+                md_bg_color: 0.10,0.25,1.00
                 on_release: app.send()

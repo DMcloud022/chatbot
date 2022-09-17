@@ -54,15 +54,15 @@ class ChatBot(MDApp):
 
         # Menu Navigation
         elif value == "Biblioteca" or value == "biblioteca" or value == "app" or value == "App" or value =='1':
-            response = "Biblioteca is an online library system that allows their users to browse books from their catalouge and borrow those books to read them in the comfort of their homes, Users would be able access different fictional, non-fictional, and academic books in one single app. \n\nBiblioteca is also equipped with a chatbot to help entertain any questions or concerns of the users, That chatbot is the one you're currently using!! Chatbot is more than willing to hear any questions that you have.\n\nType 'help' for more information."
+            response = "Biblioteca is an online library system that allows their users to browse books from their catalouge and borrow those books to read them in the comfort of their homes, Users would be able access different fictional, non-fictional, and academic books in one single app. \n\nBiblioteca is also equipped with a chatbot to help entertain any questions or concerns of the users, That chatbot is the one you're currently using!! Chatbot is more than willing to hear any questions that you have.\n\nType 'menu' to go back."
         elif value == "Books" or value == "books" or value == "book" or value == "Book" or value == "Genre" or value == "genre" or value == "Book genre" or value == '2':
-            response ="Lucy: The genres available in this app are:\n\n Fiction\n Non Fiction\n Academic\n\nType 'help' for more information."
+            response ="Lucy: The genres available in this app are:\n\n Fiction\n Non Fiction\n Academic\n\nType 'menu' to go back."
         elif value == "Service" or value == "service" or value == "services" or value == "Services" or value == '3':
-            response ="This application provides the following:\n\n1. This application provides list of books available in the Bibilioteca mobile application that you can borrow in the Biblioteca Library System.\n\n2. The application provides the title, date published, and author of the book that you want to borrow.\n\n3. It provides ...\n\n\nType 'help' for more information."
+            response ="Application Services\n\n1. This application provides a list of books available in the Biblioteca mobile application that you can borrow in the Biblioteca Library System.\n\n2. This application provides the title, date published, and the name of the author of the book that you want to borrow.\n\n3. This application assists the user in navigating the application.\n\n4. This application provides 24/7 support along with the intention to free up staff time from routine queries.\n\n5. This application services support students in searching for different resources which can be a complex and difficult task.\n\nType 'menu' to go back."
         elif value == "Developers" or value == "developers" or value == "Devs" or value == "devs" or value =='4':
-            response ="--- DEVELOPERS ---\n\n1. Florencio, Daniel\n2. Herrera, Mikaela\n3. Medrano, Yvette\n4. Noprada, Shane\n5. Revilla, Aarone\n\n Type 'help' for more information."
+            response ="--- THE TEAM ---\n\n1. Florencio, Daniel (BSCS)\n2. Herrera, Mikaela (BSCS)\n3. Medrano, Yvette (BSCS)\n4. Noprada, Shane (BSCS)\n5. Revilla, Aarone (BSCS)\n\nType 'menu' to go back."
         elif value == "Help" or value == "help" or value == "info" or value == "Info":
-            response = "Lucy: These are the keywords that you can use to navigate the app.\n\nacademic - academic books\nbiblioteca - project information\nbooks - list of books\ndevs - the developers\nfiction - fictional books\nnon fiction - non fictional books\n\n Type 'help' for more information."
+            response = "Lucy: These are the keywords that you can use to navigate the app.\n\nacademic - academic books\nbiblioteca - project information\nbooks - list of books\ndevs - the developers\nfiction - fictional books\nnon fiction - non fictional books\n\nType 'help' for more information."
         # Optional
         elif value == "best" or value == "Best" or value == "top" or value == "Top":
             #screen_manager.get_screen('chats').chat_list.add_widget(ResponseImage(source="images/best/bestFiveBooks.png"))
@@ -91,8 +91,9 @@ class ChatBot(MDApp):
         elif value == "Intelligent agents" or value == "intelligent agents" or value == "course" or value == "Course":
             response ="  --- FINAL PROJECT ---\n           GROUP 5\n CS 403 - CS31S1\n Intelligent Agents\n\n Submitted to: Ms. Lorna C. Lim\n\n\n Type 'menu' to go to the main menu."
 
-        elif value == "Stop" or value == "stop" or value == "done" or value == "Done" or value =='out'or value =='Out':
+        elif value == "Stop" or value == "stop" or value == "done" or value == "Done" or value =='out'or value =='Out'or value == 'Close' or value =='close'or value =='Tama na' or value =='tama na' or value == 'pagod na ako' or value == 'Pagod na ako':
             response = "Lucy: Thank you for using our application."
+            App.get_running_app().stop()
            
             # Fictional books (All)
         elif value == "Fiction" or value == "fiction":
@@ -240,7 +241,7 @@ class ChatBot(MDApp):
             response = f" Book Title:Beyond Good and Evil\n Author: Friedrich Nietzsche \n Published: January 1, 1886 "
 
         else:
-            response = "Sorry could you say that again?"
+            response = "Lucy: Sorry could you say that again?"
         screen_manager.get_screen('chats').chat_list.add_widget(Response(text=response, size_hint_x=.75))
 
     def send(self):
