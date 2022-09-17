@@ -54,15 +54,15 @@ class ChatBot(MDApp):
 
         # Menu Navigation
         elif value == "Biblioteca" or value == "biblioteca" or value == "app" or value == "App" or value =='1':
-            response = "Biblioteca is an online library system that allows their users to browse books from their catalouge and borrow those books to read them in the comfort of their homes, Users would be able access different fictional, non-fictional, educational and entertainment books in one single app. \n\nBiblioteca is also equipped with a chatbot to help entertain any questions or concerns of the users, That chatbot is the one you're currently using!! Chatbot is more than willing to hear any questions that you have.\nType 'help' for more information."
+            response = "Biblioteca is an online library system that allows their users to browse books from their catalouge and borrow those books to read them in the comfort of their homes, Users would be able access different fictional, non-fictional, and academic books in one single app. \n\nBiblioteca is also equipped with a chatbot to help entertain any questions or concerns of the users, That chatbot is the one you're currently using!! Chatbot is more than willing to hear any questions that you have.\n\nType 'help' for more information."
         elif value == "Books" or value == "books" or value == "book" or value == "Book" or value == "Genre" or value == "genre" or value == "Book genre" or value == '2':
-            response ="Lucy: The genres available in this app are:\n\n Fiction\n Non Fiction\n Academic\n Entertainment"
+            response ="Lucy: The genres available in this app are:\n\n Fiction\n Non Fiction\n Academic\n\nType 'help' for more information."
         elif value == "Service" or value == "service" or value == "services" or value == "Services" or value == '3':
-            response ="This application provides the following:\n\n1. This application provides list of books available in the Bibilioteca mobile application that you can borrow.\n2. It provides ... \n3. It provides ...\n\n\nType 'help' for more information."
+            response ="This application provides the following:\n\n1. This application provides list of books available in the Bibilioteca mobile application that you can borrow in the Biblioteca Library System.\n\n2. The application provides the title, date published, and author of the book that you want to borrow.\n\n3. It provides ...\n\n\nType 'help' for more information."
         elif value == "Developers" or value == "developers" or value == "Devs" or value == "devs" or value =='4':
             response ="--- DEVELOPERS ---\n\n1. Florencio, Daniel\n2. Herrera, Mikaela\n3. Medrano, Yvette\n4. Noprada, Shane\n5. Revilla, Aarone\n\n Type 'help' for more information."
         elif value == "Help" or value == "help" or value == "info" or value == "Info":
-            response = "Lucy: These are the keywords that you can use to navigate the app.\n\nbiblioteca - project information\ndevs - the developers\nbooks - list of books\nfiction - fictional books"
+            response = "Lucy: These are the keywords that you can use to navigate the app.\n\nacademic - academic books\nbiblioteca - project information\nbooks - list of books\ndevs - the developers\nfiction - fictional books\nnon fiction - non fictional books\n\n Type 'help' for more information."
         # Optional
         elif value == "best" or value == "Best" or value == "top" or value == "Top":
             #screen_manager.get_screen('chats').chat_list.add_widget(ResponseImage(source="images/best/bestFiveBooks.png"))
@@ -110,15 +110,8 @@ class ChatBot(MDApp):
             # Academic books (All)
         elif value == "Academic" or value == "academic" or value == "acad" or value == "Acad" or value == "educational" or value == "Educational":
             screen_manager.get_screen('chats').chat_list.add_widget(ResponseImage(source="images/img_cat/bg.png"))
-            response = "1. Book 1\n2. Book 2\n3. Book 3"
-           
-            # Entertainment books (All)
-        elif value == "Entertainment" or value == "entertainment" or value == "manga" or value == "Manga" or value == "manhwa" or value == "Manhwa":
-            screen_manager.get_screen('chats').chat_list.add_widget(ResponseImage(source="images/img_cat/bg.png"))
-            response = "1. Book 1\n2. Book 2\n3. Book 3"
-
-          
-
+            response = "1. A Brief History of Time\n2. On the Origins of Species 2\n3. The Uses of Literacy\n4. The Meaning of Relativity\n5. How to Write a Lot\n6. Writing for Social Scientists\n7. Introduction to Academic Writing, Third Edition \n8. The Shakespeare Requirement: A Novel \n9. The Communist Manifesto \n10. Beyond Good and Evil "
+               
         # FICTION
         elif value == "Sea of Tranquility" or value == "sea of tranquility":
             screen_manager.get_screen('chats').chat_list.add_widget(ResponseImage(source="images/fiction/SoT.png"))
@@ -204,8 +197,6 @@ class ChatBot(MDApp):
             screen_manager.get_screen('chats').chat_list.add_widget(ResponseImage(source="images/non_fiction/colour_of_madness.png"))
             response = " Book Title: The Colour of Madness: Exploring BAME mental health in the UK\n Author: Samara Linton \n Published: September 2018"
 
-        
-
         # Academic
 
         elif value == "A Brief History of Time" or value == "brief history of time" or value == "history of time":
@@ -247,7 +238,6 @@ class ChatBot(MDApp):
         elif value == "Beyond Good and Evil " or value == "beyond good and evil " or value == "good " or value == "evil ":
             screen_manager.get_screen('chats').chat_list.add_widget(ResponseImage(source="images/academic/MBY.png"))
             response = f" Book Title:Beyond Good and Evil\n Author: Friedrich Nietzsche \n Published: January 1, 1886 "
-
 
         else:
             response = "Sorry could you say that again?"
