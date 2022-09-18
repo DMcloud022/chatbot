@@ -111,7 +111,7 @@ class ChatBot(MDApp):
             # Academic books (All)
         elif value == "Academic" or value == "academic" or value == "acad" or value == "Acad" or value == "educational" or value == "Educational":
             screen_manager.get_screen('chats').chat_list.add_widget(ResponseImage(source="images/img_cat/bg.png"))
-            response = "1. A Brief History of Time\n2. On the Origins of Species 2\n3. The Uses of Literacy\n4. The Meaning of Relativity\n5. How to Write a Lot\n6. Writing for Social Scientists\n7. Introduction to Academic Writing, Third Edition \n8. The Shakespeare Requirement: A Novel \n9. The Communist Manifesto \n10. Beyond Good and Evil "
+            response = "1. A Brief History of Time\n2. On the Origins of Species \n3. The Uses of Literacy\n4. The Meaning of Relativity\n5. How to Write a Lot\n6. Writing for Social Scientists\n7. Introduction to Academic Writing, Third Edition \n8. The Shakespeare Requirement: A Novel \n9. The Communist Manifesto \n10. Beyond Good and Evil "
                
         # FICTION
         elif value == "Sea of Tranquility" or value == "sea of tranquility":
@@ -201,43 +201,43 @@ class ChatBot(MDApp):
         # Academic
 
         elif value == "A Brief History of Time" or value == "brief history of time" or value == "history of time":
-            screen_manager.get_screen('chats').chat_list.add_widget(ResponseImage(source="images/academic/MBY.png"))
+            screen_manager.get_screen('chats').chat_list.add_widget(ResponseImage(source="images/academic/A Brief History of Time.jpg"))
             response = f" Book Title: A Brief History of Time\n Author: Stephen Hawking\n Published: September 1, 1998"
 
         elif value == "On the Origins of Species" or value == "the origins of species" or value == "origin of species":
-            screen_manager.get_screen('chats').chat_list.add_widget(ResponseImage(source="images/academic/MBY.png"))
+            screen_manager.get_screen('chats').chat_list.add_widget(ResponseImage(source="images/academic/On the origin of the species.png"))
             response = f" Book Title: On the Origins of Species\n Author: Charles Darwin\n Published: November 24, 1859"
 
         elif value == "The Uses of Literacy" or value == "uses of literacy" or value == "literacy":
-            screen_manager.get_screen('chats').chat_list.add_widget(ResponseImage(source="images/academic/MBY.png"))
+            screen_manager.get_screen('chats').chat_list.add_widget(ResponseImage(source="images/academic/The Uses of Literacy.png"))
             response = f" Book Title: The Uses of Literacy\n Author: Richard Hoggart\n Published: February 28, 1998"
 
         elif value == "The Meaning of Relativity" or value == "meaning of relativity" or value == "relativity":
-            screen_manager.get_screen('chats').chat_list.add_widget(ResponseImage(source="images/academic/MBY.png"))
+            screen_manager.get_screen('chats').chat_list.add_widget(ResponseImage(source="images/academic/The Meaning of Relativity.png"))
             response = f" Book Title: The Meaning of Relativity\n Author: Albert Einstein\n Published: July 1, 1997 "
 
         elif value == "How to Write a Lot" or value == "how to write a lot" or value == "write a lot" or value == "lot":
-            screen_manager.get_screen('chats').chat_list.add_widget(ResponseImage(source="images/academic/MBY.png"))
+            screen_manager.get_screen('chats').chat_list.add_widget(ResponseImage(source="images/academic/How to Write a Lot.png"))
             response = f" Book Title: How to Write a Lot\n Author:  Paul J. Silvia\n Published: March 27, 2009"
 
         elif value == "Writing for Social Scientists" or value == "writing for social scientists" or value == "social scientists" or value == "scientists":
-            screen_manager.get_screen('chats').chat_list.add_widget(ResponseImage(source="images/academic/MBY.png"))
+            screen_manager.get_screen('chats').chat_list.add_widget(ResponseImage(source="images/academic/Writing for Social Scientists.png"))
             response = f" Book Title: Writing for Social Scientists\n Author: Howard S. Becker, Pamela Richards \n Published: December 15, 2007"
 
         elif value == "Introduction to Academic Writing, Third Edition " or value == "introduction to academic writing" or value == "academic writing ":
-            screen_manager.get_screen('chats').chat_list.add_widget(ResponseImage(source="images/academic/MBY.png"))
+            screen_manager.get_screen('chats').chat_list.add_widget(ResponseImage(source="images/academic/Introduction to Academic Writing, Third Edition.png"))
             response = f" Book Title: Introduction to Academic Writing, Third Edition\n Author: Alice Oshima, Ann Hogue \n Published: January 1, 1983 "
 
         elif value == "The Shakespeare Requirement: A Novel " or value == "the shakespeare requirement" or value == "shakespeare":
-            screen_manager.get_screen('chats').chat_list.add_widget(ResponseImage(source="images/academic/MBY.png"))
+            screen_manager.get_screen('chats').chat_list.add_widget(ResponseImage(source="images/academic/The Shakespeare Requirement A Novel.png"))
             response = f" Book Title: The Shakespeare Requirement: A Novel\n Author: Julie Schumacher \n Published: August 14, 2018 "
 
         elif value == "The Communist Manifesto " or value == "the communist manifesto " or value == "communist " or value == "manifesto ":
-            screen_manager.get_screen('chats').chat_list.add_widget(ResponseImage(source="images/academic/MBY.png"))
+            screen_manager.get_screen('chats').chat_list.add_widget(ResponseImage(source="images/academic/The Communist Manifesto.png"))
             response = f" Book Title: The Communist Manifesto\n Author: Karl Marx\n Published: February 21, 1848"
 
         elif value == "Beyond Good and Evil " or value == "beyond good and evil " or value == "good " or value == "evil ":
-            screen_manager.get_screen('chats').chat_list.add_widget(ResponseImage(source="images/academic/MBY.png"))
+            screen_manager.get_screen('chats').chat_list.add_widget(ResponseImage(source="images/academic/Beyond Good and Evil.png"))
             response = f" Book Title:Beyond Good and Evil\n Author: Friedrich Nietzsche \n Published: January 1, 1886 "
 
         else:
